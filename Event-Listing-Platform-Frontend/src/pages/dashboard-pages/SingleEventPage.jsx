@@ -15,7 +15,7 @@ const SingleEventPage = () => {
     const fetchEvent = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/v1/single-event/${id}`,
+          `https://event-listing-site.vercel.app/api/v1/single-event/${id}`,
           { withCredentials: true }
         );
         setEvent(res.data.data);
@@ -34,7 +34,7 @@ const SingleEventPage = () => {
     try {
       setTracking(true);
       const res = await axios.post(
-        `http://localhost:5000/api/v1/track-event/${id}`,
+        `https://event-listing-site.vercel.app/api/v1/track-event/${id}`,
         {},
         {
           headers: {

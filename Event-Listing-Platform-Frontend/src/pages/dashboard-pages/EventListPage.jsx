@@ -34,7 +34,7 @@ const EventListPage = () => {
       setTrackingId(eventId);
 
       const res = await axios.post(
-        `http://localhost:5000/api/v1/track-event/${eventId}`,
+        `https://event-listing-site.vercel.app/api/v1/track-event/${eventId}`,
         {},
         {
           headers: {

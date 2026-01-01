@@ -26,7 +26,7 @@ const DashboardPage = () => {
     const fetchSavedEvents = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:5000/api/v1/my-tracked-events",
+          "https://event-listing-site.vercel.app/api/v1/my-tracked-events",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -41,11 +41,14 @@ const DashboardPage = () => {
 
     const fetchMyEvents = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/v1/my-events", {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
+        const res = await axios.get(
+          "https://event-listing-site.vercel.app/api/v1/my-events",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
         console.log(res.data.data);
         setMyEvents(res.data.data);
       } catch (err) {
@@ -65,7 +68,7 @@ const DashboardPage = () => {
 
     try {
       await axios.delete(
-        `http://localhost:5000/api/v1/untrack-event/${eventId}`,
+        `https://event-listing-site.vercel.app/api/v1/untrack-event/${eventId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -86,7 +89,7 @@ const DashboardPage = () => {
 
     try {
       await axios.delete(
-        `http://localhost:5000/api/v1/delete-event/${eventId}`,
+        `https://event-listing-site.vercel.app/api/v1/delete-event/${eventId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
