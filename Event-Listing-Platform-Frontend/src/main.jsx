@@ -12,7 +12,6 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
       <HashRouter>
-        {/* Toaster should be inside so all components can trigger toasts */}
         <AppRoutes />
         <Toaster position="top-right" />
       </HashRouter>

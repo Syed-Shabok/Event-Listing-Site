@@ -18,7 +18,7 @@ const AppRoutes = () => {
       <Route path="/" element={<LoginPage />} />
       <Route path="/signup" element={<RegisterUserPage />} />
 
-      {/* Dashboard Layout (protected routes) */}
+      {/* Dashboard Layout */}
       <Route element={<PrivateRoute />}>
         <Route path="/dashboard" element={<DashboardLayout />}>
           <Route index element={<DashboardPage />} />
@@ -29,7 +29,7 @@ const AppRoutes = () => {
         </Route>
       </Route>
 
-      {/* Catch all unmatched paths */}
+      {/* Failsafee */}
       <Route path="*" element={<LoginPage />} />
     </Routes>
   );
