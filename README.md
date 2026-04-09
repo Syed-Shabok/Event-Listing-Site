@@ -1,7 +1,7 @@
 # 🎉 Event Listing Platform
 
 <p align="left">
-  <a href="https://syed-shabok.github.io/Event-Listing-Platform-Frontend/" target="_blank">
+  <a href="https://event-listing-frontend.vercel.app/" target="_blank">
     <img src="https://img.shields.io/badge/🚀%20Live%20Demo-Click%20Here-success?style=for-the-badge" />
   </a>
 </p>
